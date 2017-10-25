@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.1
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.1.xsd">
+    
+    <changeSet author="frank.spiess" id="1">
+        <createTable tableName="notification">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="notification_date" type="datetime"></column>
+            <column name="new_wbci_date" type="date"></column>
+            <column name="status" type="int"></column>
+            
+            <column name="tarif_id" type="varchar(100)"></column>
+            <column name="external_id" type="varchar(100)"></column>
+            <column name="customer_id" type="varchar(100)"></column>
+            <column name="order_event" type="varchar(100)"></column>
+            <column name="created_date" type="timestamp"></column>
+            <column name="workflow_id" type="varchar(100)"></column>
+            <column name="notification_id" type="varchar(100)"></column>
+            <column name="reseller_id" type="int"></column>
+            
+        </createTable>
+    </changeSet>
+    
+</databaseChangeLog>
